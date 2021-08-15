@@ -9,7 +9,7 @@ function entrar() {
     }
 }
 
-// ARRAY
+// ARRAY // // /// ///  //////////////////////////
 
 var esqueci = ["Leite", "Brocolis", "Morango"]
 
@@ -27,7 +27,6 @@ console.log(lista.concat(esqueci)) /*  Cria um novo array e mescla/uni ao array 
 
 
 
-
 if (lista.indexOf("Peixe") > -1) {
     alert("Preço 12.90")
 } else {
@@ -35,3 +34,42 @@ if (lista.indexOf("Peixe") > -1) {
 }
 
 console.log(lista)
+
+// LOOPS /// ///// //// 
+
+// while = Enquanto
+
+x = 2;
+
+while (x < 5) {
+    document.write("</br> O valor de x é:" + x);
+
+    x++;
+}
+
+// For = Para
+
+for (a = 2; a < 10; a++) {
+    document.write("</br> O valor do a é" + a)
+}
+
+// Switch
+
+
+function atendimento() {
+    const y = prompt(" Em qual setor deseja falar ?");
+
+    switch (y) {
+        case "0":
+            alert("Você será transferido para o setor de reclamações");
+            break;
+        case "1":
+            alert("Você será transferido para o setor de negocios ");
+            break;
+        case "3":
+            alert("Você será tranferido para o setor de marketing");
+            break;
+        default:
+            alert("Ops !! Não temos essa opção")
+    }
+}
