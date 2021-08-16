@@ -8,7 +8,7 @@
     <title>Js intermediario</title>
 </head>
 
-<body>
+<body onload="carregou()">
 
     <header>
         <h1>
@@ -25,6 +25,34 @@
     <h2>
         Eventos do Teclado
     </h2>
+    <input type="text" placeholder="onkeydown" onkeydown="tecladoApertado(event)" />
+
+    <input type="text" placeholder="onkeydown" onkeydown="shift(event)" />
+
+    <input type="text" placeholder="onkeyup" onkeyup="soltouOteclado()" />
+
+    <input type="text" placeholder="onkeypress" onkeypress="apertouEsoltouMouse()">
+
+    <h2>
+        Evento de Paginação
+    </h2>
+    <p>onload dentro do body</p>
+
+    <h2>
+        Eventos de Formulario
+    </h2>
+    <form method="POST">
+        <input type="text" name="nome" placeholder="Insira seu nome" onfocus="focado()" onblur="desfocado()"> <br/> <br/>
+        <select name="Cidades" onchange="opcaoSelecionada(this)">
+            <option>Rio de Janeiro</option>
+            <option id="saoPaulo">São Paulo</option>
+            <option> Florianopolis</option>
+            <option>Belo Horizonte</option>
+        </select> <br/> <br/>
+        <input type="submit" value="Enviar">
+    </form>
+
+
 </body>
 <script src="./curso-script2.0.js"></script>
 
