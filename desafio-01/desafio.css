@@ -6,3 +6,8 @@
     border-radius: 30px;
     position: absolute;
 }
+
+#total {
+    color: red;
+    position: fixed;
+}

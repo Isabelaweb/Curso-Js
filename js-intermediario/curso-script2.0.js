@@ -72,3 +72,34 @@ function opcaoSelecionada(objeto) {
 function enviado() {
     console.log("Formulario Enviado com Sucesso !!!")
 }
+
+/////// TRABALHANDO COM DATAS ////// 
+
+var data = new Date();
+
+data.getHours(); // Retorna somente a hora
+
+data.getMinutes(); // Retorna somente os minutos
+
+data.getSeconds();
+
+data.getUTCMilliseconds();
+
+var dataAleatoria = new Date(Date.parse("March 13, 2000"));
+
+data.getDate();
+19
+data.getDay();
+4
+data.getFullYear();
+2021
+data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear()
+"19/8/2021"
+
+var dias = ["Domingo", "Segunda", "Terca", "Quarta", "Quinta", "Sexta", "Sabado"];
+
+dias[Date.getDay()]
+
+data.setDate(data.getDate() + 60);
+
+data.setHours(data.getHours() + 12);
