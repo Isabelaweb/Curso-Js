@@ -6,7 +6,7 @@ var inputElement = document.querySelector("#app input");
 
 var buttonElement = document.querySelector("#app button");
 
-var todos = ["Levar o cachorro pra passear"];
+var todos = JSON.parse(localStorage.getItem("lista_todos")) || [];
 
 function renderTodos() {
     listElement.innerHTML = "";
@@ -18,6 +18,9 @@ function renderTodos() {
         var todoText = document.createTextNode(todo);
         var linkElement = document.createElement("a");
         linkElement.setAttribute("href", "#");
+
+        var posicao = todos.indexOf(todo);
+        linkElement.setAttribute("onclick", "deletarTodo(" + posicao + ")");
         var linkText = document.createTextNode("Excluir");
         linkElement.appendChild(linkText)
 
@@ -46,11 +49,21 @@ function adicionarTodo() {
     todos.push(todoText);
     inputElement.value = "";
     renderTodos();
+    salvarDados();
 
 }
 
 buttonElement.onclick = adicionarTodo;
 
-function deletarTodo() {
+function deletarTodo(posicao) {
+    // Splice remove algo da lista passando a posicao e o item do array
+    todos.splice(posicao, 1);
+    renderTodos();
+    salvarDados();
+
+}
+
+function salvarDados() {
+    localStorage.setItem("lista_todos", JSON.stringify(todos));
 
 }
